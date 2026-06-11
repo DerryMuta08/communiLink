@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommuniLink - Neighborhood Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📍 CommuniLink</h1>
+        <p>Lightweight Community Resilience Portal</p>
+    </header>
+    <main class="container">
+        <section id="safety-alerts" class="alert-box">
+            <strong>⚠️ CRITICAL ALERT:</strong> <span id="alert-text">Water treatment maintenance scheduled for this Friday. Please store water.</span>
+        </section>
+        <div class="grid">
+            <section class="card">
+                <h2>📢 Community Notice Board</h2>
+                <form id="notice-form">
+                    <input type="text" id="notice-title" placeholder="Notice Title" required>
+                    <textarea id="notice-text" placeholder="Write details here..." required></textarea>
+                    <button type="submit">Post Notice</button>
+                </form>
+                <div id="notices-container"></div>
+            </section>
+            <section class="card">
+                <h2>⚡ Live Utility Status</h2>
+                <div class="utility-item"><span>Power Grid:</span> <span class="status-badge standard">Online</span></div>
+                <div class="utility-item"><span>Water Supply:</span> <span class="status-badge warning">Intermittent</span></div>
+            </section>
+        </div>
+    </main>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
