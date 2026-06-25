@@ -3,86 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CommuniLink - Modern Resilience Hub</title>
+    <title>CommuniLink Nexus — Flagship Community Platform</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+    <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                CommuniLink
+            <div class="brand">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+                <span>CommuniLink <span class="nexus-tag">Nexus</span></span>
             </div>
-            <span style="font-size: 0.9rem; color: #64748b; font-weight: 500;">Harare North Portal</span>
+            <div class="nav-links">
+                <a href="#dashboard" class="active">Dashboard</a>
+                <a href="#map">Resource Grid</a>
+                <a href="#analytics">Impact Insights</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="cinematic-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge-premium">Empowering Local Resilience</span>
+            <h1>The Digital Blueprint for Community Unity.</h1>
+            <p>A bespoke ecosystem bridging real-time mutual aid, critical logistics coordination, and localized intelligence to uplift every household, instantly.</p>
+            <div class="hero-actions">
+                <a href="#dashboard" class="btn-primary">Launch Operational Core</a>
+                <a href="#map" class="btn-secondary">Explore Local Map</a>
+            </div>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-text">
-            <span class="hero-badge">Adaptive Low-Data Architecture</span>
-            <h1>Bridging Communities When Networks Fail.</h1>
-            <p>A high-performance, lightweight node built to broadcast live updates, check critical local utilities, and preserve essential information without relying on heavy data connections.</p>
-        </div>
-        <div class="hero-vector">
-            <svg viewBox="0 0 200 200" width="100%" height="220" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.1" />
-                        <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0.25" />
-                    </linearGradient>
-                </defs>
-                <circle cx="100" cy="100" r="80" fill="url(#grad)" stroke="#2563eb" stroke-width="1" stroke-dasharray="4"/>
-                <circle cx="100" cy="100" r="40" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
-                <circle cx="100" cy="100" r="6" fill="#2563eb"/>
-                <circle cx="50" cy="60" r="4" fill="#475569"/>
-                <circle cx="150" cy="60" r="4" fill="#475569"/>
-                <circle cx="150" cy="140" r="4" fill="#475569"/>
-                <circle cx="50" cy="140" r="4" fill="#475569"/>
-                <line x1="100" y1="100" x2="50" y2="60" stroke="#cbd5e1" stroke-width="1" />
-                <line x1="100" y1="100" x2="150" y2="60" stroke="#cbd5e1" stroke-width="1" />
-                <line x1="100" y1="100" x2="150" y2="140" stroke="#cbd5e1" stroke-width="1" />
-                <line x1="100" y1="100" x2="50" y2="140" stroke="#cbd5e1" stroke-width="1" />
-            </svg>
-        </div>
-    </section>
-
-    <main>
-        <div class="card">
-            <h2>Broadcast a Notice</h2>
+    <main class="dashboard-grid" id="dashboard">
+        
+        <section class="panel-card">
+            <div class="card-header">
+                <h2>Broadcast Control</h2>
+                <p>Deploy real-time intelligence alerts directly to the community nexus.</p>
+            </div>
+            
             <form id="notice-form">
-                <div class="form-group">
-                    <label for="notice-title">Notice Title</label>
-                    <input type="text" id="notice-title" placeholder="e.g., Sector 4 Borehole Repaired" required>
+                <div class="input-wrapper">
+                    <label>Notice Heading</label>
+                    <input type="text" id="notice-title" placeholder="e.g., Community Solar Hub Online" required>
                 </div>
-                <div class="form-group">
-                    <label for="notice-text">Detailed Description</label>
-                    <textarea id="notice-text" rows="4" placeholder="Enter specific local guidelines or operational details..." required></textarea>
+                <div class="input-wrapper">
+                    <label>Broadcast Intelligence / Instructions</label>
+                    <textarea id="notice-text" rows="4" placeholder="Share step-by-step coordinates, times, or vital updates..." required></textarea>
                 </div>
-                <button type="submit">Publish to Live Board</button>
+                <button type="submit" class="btn-submit">Publish Broadcast</button>
             </form>
 
-            <div style="margin-top: 2.5rem; pt: 2rem; border-top: 1px dashed #e2e8f0;">
-                <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: #334155;">⚡ Node Utility Tracking</h3>
-                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem;">
-                        <span>Electrical Grid Status</span>
-                        <span class="status-badge online">Grid Operational</span>
+            <div class="resource-tracker">
+                <h3>System Infrastructure Metrics</h3>
+                <div class="metric-row">
+                    <div class="metric-info">
+                        <span class="metric-dot online"></span>
+                        <div>
+                            <h4>Solar Charging Grid</h4>
+                            <p>Peak output operational</p>
+                        </div>
                     </div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem;">
-                        <span>Municipal Water Line</span>
-                        <span class="status-badge intermittent">Intermittent Flow</span>
+                    <span class="metric-value">100%</span>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-info">
+                        <span class="metric-dot warning"></span>
+                        <div>
+                            <h4>Borehole Pump Alpha</h4>
+                            <p>Maintenance cycle active</p>
+                        </div>
                     </div>
+                    <span class="metric-value">45%</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="card">
-            <h2>Live Community Feed</h2>
-            <div id="notices-container">
+        <section class="panel-card feed-card">
+            <div class="card-header">
+                <h2>Live Intelligence Stream</h2>
+                <p>Synchronized global updates across the Harare North sector.</p>
+            </div>
+            <div id="notices-container" class="feed-container">
                 </div>
-        </div>
+        </section>
+
     </main>
+
+    <section class="interactive-showcase" id="map">
+        <div class="showcase-header">
+            <h2>Bespoke Mutual Aid Mapping</h2>
+            <p>Clickable hyper-localized infrastructure points to coordinate aid instantly.</p>
+        </div>
+        <div class="map-mockup-grid">
+            <div class="grid-node-card">
+                <div class="node-icon">💧</div>
+                <h3>Clean Water Hubs</h3>
+                <p>3 Active automated delivery points.</p>
+            </div>
+            <div class="grid-node-card">
+                <div class="node-icon">🔋</div>
+                <h3>Micro-Grid Nodes</h3>
+                <p>Community solar arrays active.</p>
+            </div>
+            <div class="grid-node-card">
+                <div class="node-icon">🏥</div>
+                <h3>Medical Aid Points</h3>
+                <p>First-response clinics standing by.</p>
+            </div>
+        </div>
+    </section>
 
     <script type="module" src="app.js"></script>
 </body>
